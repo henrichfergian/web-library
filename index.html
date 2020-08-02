@@ -10,60 +10,151 @@
 
 <body>
     <header>
-        <h1>E-Library</h1>
+        <div class="jtron">
+            <h1>E-Library</h1>
+        </div>
         <div class="nav">
             <ul>
                 <li><a href="">Home</a></li>
-                <li><a href="">Profile</a></li>
-                <li><a href="">My Collection</a></li>
+                <li><a href="./profile.html">Profile</a></li>
+                <li><a href="#collection">Collection</a></li>
             </ul>
         </div>
     </header>
     <main>
-        <div class="content">
-            <article class="recent card">
+        <div id="content">
+            <article id="recentRead" class="card">
                 <div class="flex-Y-container">
                     <h2>Recently Readed</h2>
-                    <div class="flex-X-Container">
-
+                    <div class="flex-X-container" id="recentList">
                     </div>
                 </div>
             </article>
-            <article class="collection card">
+            <article id="collection" class="card">
                 <h2>Collection</h2>
                 <div class="flex-Y-container">
+                    <div class="flex-X-container">
+                        <div class="contentImg">
+                            <img src="./resources/Guns_Germs And Steel.jpg" alt="Guns Germs and Steel">
+                        </div>
+                        <div class="contentDetail">
+                            <h4>Guns Germs and Stell</h4>
+                            <table>
+                                <tr>
+                                    <td>Author</td>
+                                    <td>: Jared Diamond</td>
+                                </tr>
+                                <tr>
+                                    <td>Published</td>
+                                    <td>: 1997, W. W. Norton, New York</td>
+                                </tr>
+                            </table>
+                            <p>Description</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita asperiores voluptates a
+                                laboriosam veniam! Ullam, hic quos? Natus commodi dolor eum. Quas natus sit porro
+                                debitis expedita rerum tempora sed.</p>
+                        </div>
+                    </div>
+                    <div class="flex-X-container">
+                        <div class="contentImg">
+                            <img src="./resources/cosmos.jpg" alt="Cosmos">
+                        </div>
+                        <div class="contentDetail">
+                            <h4>Cosmos</h4>
+                            <table>
+                                <tr>
+                                    <td>Author</td>
+                                    <td>: Carl Sagan</td>
+                                </tr>
+                                <tr>
+                                    <td>Published</td>
+                                    <td>: 1980, Random House, New York</td>
+                                </tr>
+                            </table>
+                            <p>Description</p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non repellendus placeat est,
+                                culpa temporibus quibusdam perspiciatis? Molestiae tempora ea delectus sapiente iste
+                                labore animi, voluptates molestias consequuntur facere pariatur soluta.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex-X-container">
+                        <div class="contentImg">
+                            <img src="./resources/Di_Bawah_Lentera_Merah.jpg" alt="Di Di Bawah Lentera Merah">
+                        </div>
+                        <div class="contentDetail">
+                            <h4>Di Bawah Lentera Merah</h4>
+                            <table>
+                                <tr>
+                                    <td>Author</td>
+                                    <td>Soe Hok Gie</td>
+                                </tr>
+                                <tr>
+                                    <td>Published</td>
+                                    <td>: 1999, Soe Hok Gie</td>
+                                </tr>
+                            </table>
+                            <p>Description</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa doloribus maxime dolore
+                                quidem perspiciatis tenetur aperiam sint, itaque vero? Culpa nemo consequuntur
+                                laboriosam quisquam ipsum inventore sint, provident perferendis sunt?</p>
+                        </div>
+                    </div>
+                    <div class="flex-X-container">
+                        <div class="contentImg">
+                            <img src="./resources/The Selfish Gene.jpg" alt="The Selfish Gene">
+                        </div>
+                        <div class="contentDetail">
+                            <h4>The Selfish Gene</h4>
+                            <table>
+                                <tr>
+                                    <td>Author</td>
+                                    <td>Richard Dawkins</td>
+                                </tr>
+                                <tr>
+                                    <td>Published</td>
+                                    <td>: 1976, Oxford University Press, United Kingdom</td>
+                                </tr>
+                            </table>
+                            <p>Description</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores deserunt maxime minus
+                                pariatur enim quasi omnis. Labore, odit omnis eum nihil culpa atque dolor harum vel
+                                eveniet saepe nisi magnam?</p>
+                        </div>
+                    </div>
                 </div>
             </article>
         </div>
         <aside>
-            <article class="card">
+            <article class="profile card">
                 <header>
                     <h2>Profile</h2>
                     <img src="./resources/profile1.jpg" alt="foto profil">
                     <h3>Henrich Fergian Lizarazu</h3>
                 </header>
+                <section>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Status</td>
+                                <td>Scholar</td>
+                            </tr>
+                            <tr id="pRank">
+                                <td>Rank</td>
+                            </tr>
+                            <tr id="pReaded">
+                                <td>E-book Readed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
             </article>
-            <section>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Status</td>
-                            <td>scholar</td>
-                        </tr>
-                        <tr id="pRank">
-                            <td>Rank</td>
-                        </tr>
-                        <tr id="pReaded">
-                            <td>E-book Readed</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
         </aside>
     </main>
     <footer>
         <p>Web Library</p>
-        <p>&copy;Developed by Henrich FL</p>
+        <p>&copy;2020 Developed by Henrich FL</p>
     </footer>
     <script src="storage.js"></script>
     <script src="script.js"></script>

@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 5px 7px 0px darkslategray;
+}
+
+.flex-Y-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-X-container {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.flex-X-container img {
+    width: 160px;
+}
+
+.contentImg,
+.contentDetail {
+    flex-grow: 1;
+}
+
+aside {
+    float: left;
+    width: 25%;
+}
+
+.profile img {
+    width: 168px;
+    height: 168px;
+    object-fit: cover;
+    object-position: center;
+}
+
+main {
+    overflow: auto;
+}
+
+#content {
+    float: right;
+    width: 75%;
+}
+
+footer p {
+    display: inline;
+}
