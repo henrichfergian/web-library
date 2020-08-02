@@ -133,11 +133,11 @@ main {
 footer {
     background: #030e27;
     color: white;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
 }
 
 footer p {
     display: inline;
-    padding: 30px;
+    padding: 5px 30px 5px 30px;
 }
