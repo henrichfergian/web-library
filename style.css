@@ -26,6 +26,10 @@ body {
     width: 160px;
 }
 
+.flex-X-container:nth-child(even) {
+    background: lightblue;
+}
+
 .contentImg,
 .contentDetail {
     flex-grow: 1;
@@ -33,7 +37,13 @@ body {
 
 aside {
     float: left;
-    width: 25%;
+    width: 23%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+aside td {
+    padding-right: 10px;
 }
 
 .profile img {
@@ -45,11 +55,12 @@ aside {
 
 main {
     overflow: auto;
+    padding: 20px;
 }
 
 #content {
     float: right;
-    width: 75%;
+    width: 77%;
 }
 
 footer p {
