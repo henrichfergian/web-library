@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Library</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -31,20 +32,20 @@
                 </header>
             </article>
             <section>
-                <tbody>
-                    <tr>
-                        <td>Status</td>
-                        <td>scholar</td>
-                    </tr>
-                    <tr>
-                        <td>Rank</td>
-                        <td id="pRank"></td>
-                    </tr>
-                    <tr>
-                        <td>Jumlah telah dibaca</td>
-                        <td id="pReaded"></td>
-                    </tr>
-                </tbody>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Status</td>
+                            <td>scholar</td>
+                        </tr>
+                        <tr id="pRank">
+                            <td>Rank</td>
+                        </tr>
+                        <tr id="pReaded">
+                            <td>E-book Readed</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
         </aside>
     </main>
@@ -52,6 +53,8 @@
         <p>Web Library</p>
         <p>&copy;Developed by Henrich FL</p>
     </footer>
+    <script src="storage.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
