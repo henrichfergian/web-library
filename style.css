@@ -19,8 +19,8 @@ body {
 }
 
 .logo-fluid {
-    flex-basis: 15%;
-    display: inline;
+    /* flex-basis: 15%; */
+    /* display: inline; */
     text-align: center;
     color: white;
     position: absolute;
@@ -32,7 +32,7 @@ body {
 }
 
 .logo {
-    flex-basis: 15%;
+    flex-basis: 20%;
     position: relative;
     top: 0;
 }
@@ -154,4 +154,37 @@ footer {
 footer p {
     display: inline;
     padding: 5px 30px 5px 30px;
+}
+
+@media screen and (max-width:1000px) {
+
+    .logo {
+        flex-basis: 25%;
+        padding: 0;
+    }
+
+    .logo-fluid {
+        font-size: 0.75em;
+        width: 125%;
+        padding: 6px;
+        top: -2px;
+        left: -1px;
+    }
+
+    nav li {
+        padding: 10px;
+    }
+
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+        float: none;
+    }
+
+    .flex-X-container {
+        display: block;
+        max-height: 540px;
+        overflow: hidden;
+    }
 }
