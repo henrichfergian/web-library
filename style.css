@@ -197,6 +197,10 @@ td {
         left: -1px;
     }
 
+    nav {
+        flex-basis: 75%;
+    }
+
     nav li {
         padding: 10px;
     }
@@ -213,4 +217,34 @@ td {
         max-height: 540px;
         overflow: hidden;
     }
+}
+
+@media screen and (max-width:450px) {
+    .logo {
+        flex-basis: 27%;
+        padding: 0cm;
+    }
+
+    .logo-fluid {
+        font-size: 0.7em;
+    }
+
+    nav {
+        flex-basis: 73%;
+    }
+
+    nav li {
+        padding: 1px;
+    }
+
+    #recentRead th,
+    td {
+        padding: 7px;
+    }
+
+    .flex-X-container {
+        max-height: 433px;
+        padding: 5px;
+    }
+
 }
