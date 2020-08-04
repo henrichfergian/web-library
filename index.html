@@ -34,13 +34,21 @@
             <article id="recentRead" class="card">
                 <h2>Recently Readed</h2>
                 <hr>
-                <div class="flex-Y-container">
-                    <div class="flex-X-container" id="recentList">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et unde a deserunt sed consequatur
-                            vero repudiandae, amet fugit quisquam laudantium provident aspernatur, veritatis dolore
-                            minima exercitationem aliquam sint, assumenda ut.</p>
-                    </div>
-                </div>
+                <!-- <div class="flex-Y-container">
+                    <div class="flex-X-container">
+
+                    </div> -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Title</th>
+                            <th>Accessed</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentList"></tbody>
+                </table>
+                <!-- </div> -->
             </article>
             <article id="collection" class="card">
                 <h2>Collection</h2>
@@ -51,15 +59,15 @@
                             <img src="./resources/Guns_Germs And Steel.jpg" alt="Guns Germs and Steel">
                         </div>
                         <div class="contentDetail">
-                            <h3>Guns Germs and Steel</h3>
+                            <h3 class="title">Guns Germs and Steel</h3>
                             <table>
                                 <tr>
                                     <td>Author</td>
-                                    <td>: Jared Diamond</td>
+                                    <td class="author">Jared Diamond</td>
                                 </tr>
                                 <tr>
                                     <td>Published</td>
-                                    <td>: 1997, W. W. Norton, New York</td>
+                                    <td>1997, W. W. Norton, New York</td>
                                 </tr>
                             </table>
                             <p>Description</p>
@@ -73,20 +81,21 @@
                             <img src="./resources/cosmos.jpg" alt="Cosmos">
                         </div>
                         <div class="contentDetail">
-                            <h3>Cosmos</h3>
+                            <h3 class="title">Cosmos</h3>
                             <table>
                                 <tr>
                                     <td>Author</td>
-                                    <td>: Carl Sagan</td>
+                                    <td class="author">Carl Sagan</td>
                                 </tr>
                                 <tr>
                                     <td>Published</td>
-                                    <td>: 1980, Random House, New York</td>
+                                    <td>1980, Random House, New York</td>
                                 </tr>
                             </table>
                             <p>Description</p>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non repellendus placeat est,
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non repellendus placeat
+                                est,
                                 culpa temporibus quibusdam perspiciatis? Molestiae tempora ea delectus sapiente iste
                                 labore animi, voluptates molestias consequuntur facere pariatur soluta.
                             </p>
@@ -94,18 +103,18 @@
                     </div>
                     <div class="flex-X-container">
                         <div class="contentImg">
-                            <img src="./resources/Di_Bawah_Lentera_Merah.jpg" alt="Di Di Bawah Lentera Merah">
+                            <img src="./resources/Di_Bawah_Lentera_Merah.jpg" alt="Di Bawah Lentera Merah">
                         </div>
                         <div class="contentDetail">
-                            <h3>Di Bawah Lentera Merah</h3>
+                            <h3 class="title">Di Bawah Lentera Merah</h3>
                             <table>
                                 <tr>
                                     <td>Author</td>
-                                    <td>Soe Hok Gie</td>
+                                    <td class="author">Soe Hok Gie</td>
                                 </tr>
                                 <tr>
                                     <td>Published</td>
-                                    <td>: 1999, Soe Hok Gie</td>
+                                    <td>1999, Soe Hok Gie</td>
                                 </tr>
                             </table>
                             <p>Description</p>
@@ -119,15 +128,15 @@
                             <img src="./resources/The Selfish Gene.jpg" alt="The Selfish Gene">
                         </div>
                         <div class="contentDetail">
-                            <h3>The Selfish Gene</h3>
+                            <h3 class="title">The Selfish Gene</h3>
                             <table>
                                 <tr>
                                     <td>Author</td>
-                                    <td>Richard Dawkins</td>
+                                    <td class="author">Richard Dawkins</td>
                                 </tr>
                                 <tr>
                                     <td>Published</td>
-                                    <td>: 1976, Oxford University Press, United Kingdom</td>
+                                    <td>1976, Oxford University Press, United Kingdom</td>
                                 </tr>
                             </table>
                             <p>Description</p>
@@ -143,8 +152,10 @@
             <article class="profile card">
                 <header>
                     <h2>Profile</h2>
-                    <img src="./resources/profile1.jpg" alt="foto profil">
-                    <h3>Henrich Fergian Lizarazu</h3>
+                    <div class="pBorder">
+                        <img src="./resources/profile1.jpg" alt="foto profil">
+                        <h3>Henrich Fergian Lizarazu</h3>
+                    </div>
                 </header>
                 <section>
                     <table>
@@ -153,14 +164,17 @@
                                 <td>Status</td>
                                 <td>Scholar</td>
                             </tr>
-                            <tr id="pRank">
+                            <tr>
                                 <td>Rank</td>
+                                <td id="pRank"></td>
                             </tr>
-                            <tr id="pCollected">
+                            <tr>
                                 <td>Collection</td>
+                                <td id="pCollection"></td>
                             </tr>
-                            <tr id="pReaded">
+                            <tr>
                                 <td>E-book Readed</td>
+                                <td id="pReaded"></td>
                             </tr>
                         </tbody>
                     </table>

@@ -19,8 +19,6 @@ body {
 }
 
 .logo-fluid {
-    /* flex-basis: 15%; */
-    /* display: inline; */
     text-align: center;
     color: white;
     position: absolute;
@@ -103,6 +101,7 @@ header {
 
 .contentImg {
     flex-basis: 20%;
+    cursor: pointer;
 }
 
 .contentDetail {
@@ -118,15 +117,21 @@ aside {
 }
 
 aside td {
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 .profile img {
-    width: 100%;
-    height: 200px;
+    /* width: 100%; */
+    max-width: 220px;
+    height: 220px;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
+}
+
+.pBorder {
+    text-align: center;
+    border: 1px solid red;
 }
 
 main {
@@ -153,7 +158,28 @@ footer {
 
 footer p {
     display: inline;
-    padding: 5px 30px 5px 30px;
+    padding: 5px;
+}
+
+.title {
+    cursor: pointer;
+}
+
+#recentRead table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    text-align: center;
+}
+
+#recentRead thead {
+    color: white;
+    background: rgb(248, 113, 59);
+}
+
+#recentRead th,
+td {
+    padding: 10px;
 }
 
 @media screen and (max-width:1000px) {
