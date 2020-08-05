@@ -52,10 +52,10 @@ function getHistory(key) {
     }
 }
 
-function removeElementsByClass(className) {
-    let elements = document.getElementsByClassName(className);
-    while (elements.length > 0) {
-        elements[0].parentNode.removeChild(elements[0]);
+function rmNode(className) {
+    let nodeList = document.getElementsByClassName(className);
+    while (nodeList.length > 0) {
+        nodeList[0].parentNode.removeChild(elements[0]);
     }
 }
 
