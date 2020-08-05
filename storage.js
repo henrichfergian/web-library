@@ -89,7 +89,7 @@ function renderingData() {
     }
 
     let container = document.querySelector('.flex-Y-container');
-    removeElementsByClass('newData')
+    rmNode('newData');
 
     // render data collection
     console.log(container)
