@@ -1,15 +1,17 @@
-const clickImg = document.querySelectorAll('.contentImg');
+let clickImg = document.querySelectorAll('.contentImg');
 let clickTitle = document.querySelectorAll('.title');
 
+const pStat = {
+    rank: 'newbie',
+    collection: 0,
+    booksReaded: 0
+};
+
 function setStat() {
-    const pStat = {
-        rank: 'newbie',
-        collection: 0,
-        booksReaded: 0
-    };
-    console.log(booksCount)
+    const historyData = getHistory(cacheKey2);
+    console.log(historyData.length)
     console.log(clickImg.length)
-    let count = booksCount;
+    let count = historyData.length;
     if (count <= 10) {
         pStat.rank = 'Newbie';
     } else if (count <= 50) {
@@ -18,6 +20,7 @@ function setStat() {
         pStat.rank = 'Master';
     } else {
         pStat.rank = 'Legendary';
+        console.log(count)
     }
     pStat.collection = clickImg.length;
     pStat.booksReaded = count;
@@ -68,34 +71,30 @@ for (const click of clickTitle) {
     });
 }
 
-// buttonElement.addEventListener('click', function (event) {
-//     let container = document.querySelector('flex-Y-container');
-//     const bookData = {
-//         title: bookTitle.value,
-//         author: bookAuthor.value,
-//         published: bookPublish.value,
-//         desc: bookDesc.value
-//     };
-//     let newCollection = document.createElement('div');
-//     newCollection.classList.add('flex-X-Container');
-//     newCollection.innerHTML = `
-//     <div class="contentImg">
-//         < img src = "./resources/book vector.png" alt="${bookData.title}">
-//     </div>
-//     <div class="contentDetail">
-//         <h3 class="title">${bookData.title}</h3>
-//         <table >
-//             <tr>
-//                 <td>Author</td>
-//                 <td class="author">${bookData.author}</td>
-//             </tr>
-//             <tr>
-//                 <td>Published</td>
-//                 <td>${bookData.published}</td>
-//             </tr>
-//         </table>
-//         <p>Description</p>
-//         <p>${bookData.desc}</p>
-//     </div>`;
-//     container.appendChild(newCollection);
-// })
+const buttonElement = document.getElementById('submitBtn')
+const bookTitle = document.getElementById('bookTitle')
+const bookAuthor = document.getElementById('bookAuthor')
+const bookPublish = document.getElementById('bookPublish')
+const bookDesc = document.getElementById('bookDesc')
+
+buttonElement.addEventListener('click', function (event) {
+    let Eflag = false;
+    const bookData = {
+        title: bookTitle.value,
+        author: bookAuthor.value,
+        published: bookPublish.value,
+        description: bookDesc.value
+    };
+    for (const prop in bookData) {
+        if ((bookData[prop] === null) || (bookData[prop] === '')) {
+            alert(`${prop} field is empty!`);
+            Eflag = true;
+            break;
+        }
+    }
+    if (!Eflag) {
+        recordHistory(bookData, cacheKey3);
+        setStat();
+        renderingData();
+    }
+})
