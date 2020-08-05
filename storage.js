@@ -66,7 +66,7 @@ function renderingData() {
         let row = document.createElement('tr');
         row.innerHTML = `
             <td>${historyData.indexOf(item)+1}</td>
-        <td class="title">${item.title}</td>
+            <td class="title">${item.title}</td>
             <td>${item.timestamp}</td>`;
         recentList.appendChild(row);
     }
@@ -76,6 +76,57 @@ function renderingData() {
         collection.innerText = item.collection;
         booksReaded.innerText = item.booksReaded;
     }
+
+    const buttonElement = document.getElementById('submitBtn')
+    const bookTitle = document.getElementById('bookTitle')
+    const bookAuthor = document.getElementById('bookAuthor')
+    const bookPublish = document.getElementById('bookPublish')
+    const bookDesc = document.getElementById('bookDesc')
+    let container = document.querySelector('.flex-Y-container');
+    console.log(container)
+
+    buttonElement.addEventListener('click', function (event) {
+        let Eflag = false;
+        const bookData = {
+            title: bookTitle.value,
+            author: bookAuthor.value,
+            published: bookPublish.value,
+            description: bookDesc.value
+        };
+        for (const prop in bookData) {
+            if ((bookData[prop] === null) || (bookData[prop] === '')) {
+                alert(`${prop} field is empty!`);
+                Eflag = true;
+                break;
+            }
+        }
+        if (!Eflag) {
+            let newCollection = document.createElement('div');
+            newCollection.classList.add('flex-X-container');
+            newCollection.innerHTML = `
+                    <div class="contentImg">
+                        <img src="./resources/book vector.png" alt="${bookData.title}">
+                    </div>
+                    <div class="contentDetail">
+                        <h3 class="title">${bookData.title}</h3>
+                    <table >
+                        <tr>
+                            <td>Author</td>
+                            <td class="author">${bookData.author}</td>
+                        </tr>
+                        <tr>
+                            <td>Published</td>
+                            <td>${bookData.published}</td>
+                        </tr>
+                    </table>
+                    <p>Description</p>
+                    <p>${bookData.description}</p>
+                    </div>`;
+            console.log(bookData);
+            container.appendChild(newCollection);
+        }
+    })
+
     clickTitle = document.querySelectorAll('.title')
 }
 

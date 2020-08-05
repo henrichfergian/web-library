@@ -1,6 +1,5 @@
 const clickImg = document.querySelectorAll('.contentImg');
 let clickTitle = document.querySelectorAll('.title');
-const author = document.querySelectorAll('.author')
 
 function setStat() {
     const pStat = {
@@ -66,5 +65,37 @@ for (const click of clickTitle) {
         recordHistory(itemData, cacheKey2);
         setStat()
         renderingData();
-    })
+    });
 }
+
+// buttonElement.addEventListener('click', function (event) {
+//     let container = document.querySelector('flex-Y-container');
+//     const bookData = {
+//         title: bookTitle.value,
+//         author: bookAuthor.value,
+//         published: bookPublish.value,
+//         desc: bookDesc.value
+//     };
+//     let newCollection = document.createElement('div');
+//     newCollection.classList.add('flex-X-Container');
+//     newCollection.innerHTML = `
+//     <div class="contentImg">
+//         < img src = "./resources/book vector.png" alt="${bookData.title}">
+//     </div>
+//     <div class="contentDetail">
+//         <h3 class="title">${bookData.title}</h3>
+//         <table >
+//             <tr>
+//                 <td>Author</td>
+//                 <td class="author">${bookData.author}</td>
+//             </tr>
+//             <tr>
+//                 <td>Published</td>
+//                 <td>${bookData.published}</td>
+//             </tr>
+//         </table>
+//         <p>Description</p>
+//         <p>${bookData.desc}</p>
+//     </div>`;
+//     container.appendChild(newCollection);
+// })

@@ -5,14 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header>
+        <div class="menu-style">
+            <div class="logo">
+                <div class="logo-fluid">
+                    <h1>E-Library</h1>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./profile.html">Profile</a></li>
+                    <li><a href="#collection">Collection</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="banner">
+            <img src="./resources/Library_Oxford_UK.jpg" alt="Oxford Library UK">
+        </div>
+    </header>
     <main>
         <div class="content">
-
+            <article class="profile card">
+                <header>
+                    <h2>Profile</h2>
+                    <div class="pBorder">
+                        <img src="./resources/profile1.jpg" alt="foto profil">
+                        <h3>Henrich Fergian Lizarazu</h3>
+                    </div>
+                </header>
+                <section>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Status</td>
+                                <td>Scholar</td>
+                            </tr>
+                            <tr>
+                                <td>Rank</td>
+                                <td id="pRank"></td>
+                            </tr>
+                            <tr>
+                                <td>Collection</td>
+                                <td id="pCollection"></td>
+                            </tr>
+                            <tr>
+                                <td>E-book Readed</td>
+                                <td id="pReaded"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
         </div>
     </main>
+    <script src="storage.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
